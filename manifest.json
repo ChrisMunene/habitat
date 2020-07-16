@@ -1,0 +1,9 @@
+{
+  "name": "Habitat",
+  "short_name": "Habitat",
+  "lang": "en-US",
+  "start_url": "/Habitat/",
+  "scope": "/Habitat/",
+  "display": "standalone",
+  "theme_color": "#009688"
+}

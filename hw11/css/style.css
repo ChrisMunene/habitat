@@ -1,0 +1,115 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+body {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+
+main {
+	flex: 1;
+}
+
+nav {
+	overflow: visible !important;
+	margin-top: 0 !important;
+}
+
+.tab a {
+	line-height: 64px;
+}
+
+.sidenav-header {
+	font-size: larger;
+	font-weight: bold;
+	padding: 0 30px;
+}
+
+.sidenav li.active {
+	background-color: #00838f;
+}
+
+.icon-block {
+	padding: 0 15px;
+}
+
+.icon-block .material-icons {
+	font-size: inherit;
+}
+
+/* The following Materialize toolbar fix was adapted from
+ * https://stackoverflow.com/questions/42730512/how-to-make-the-materializecss-fixed-action-btn-toolbar-into-just-a-toolbar
+ */
+.toolbar-fixed {
+	width: 100%;
+	padding: 0;
+	height: 56px;
+	position: fixed;
+	bottom: 0px;
+}
+
+.toolbar-fixed.active > a i {
+	opacity: 0;
+}
+
+.toolbar-fixed ul {
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	top: 0;
+	bottom: 0;
+}
+
+
+.toolbar-fixed ul li {
+	-webkit-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+	display: inline-block;
+	margin: -;
+	height: 100%;
+	transition: none;
+	position: relative;
+	top: -15px;
+
+}
+
+
+.toolbar-fixed ul li a{
+	display: block;
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background-color: transparent;
+	box-shadow: none;
+	color: #fff;
+	line-height: 56px;
+	z-index: 1;
+}
+
+.toolbar-fixed ul li a i {
+	line-height: inherit;
+}
+
+.toolbar-fixed ul {
+	left: 0;
+	right: 0;
+	text-align: center;
+}
+/* End toolbar fix */
+
+label.card-title span {
+	display: block;
+	line-height: 32px;
+	margin-bottom: 8px;
+	font-size: 24px !important;
+	font-weight: 300;
+	color: black;
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<title>Habitat: Onboarding</title>
+
+	<!-- CSS	-->
+	<link rel="manifest" href="manifest.json">
+	<link href="fonts/material-icons.css" type="text/css" rel="stylesheet" media="screen,project"/>
+	<link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+	<link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body class="blue-grey lighten-5">
+	<nav class="nav-wrapper blue-grey darken-3" role="navigation">
+		<a id="logo-container" href="index.html" class="brand-logo cyan-text text-accent-3"><img src="assets/logo.png" style="height: 56px;"></a>
+	</nav>
+	
+	<!-- Checklist -->
+	<main class="welcome">
+		<form action="#">
+			<div class="carousel carousel-slider center">
+				<div class="carousel-item" href="#one!">
+					<h2 class="header teal-text text-darken-1">Start a habit<br /><em>and stick with it</em></h2>
+					<div class="row center">
+						<h5 class="header col s12 light">Stay on track with curated goals and social accountability</h5>
+					</div>
+					<div class="row center">
+						<a class="btn waves-effect cyan white-text darken-2" onclick="M.Carousel.getInstance(document.querySelector('.carousel')).next();">Choose a Habit</a>
+					</div>
+				</div>
+				<div class="carousel-item" href="#two!">
+					<div class="onboarding">
+						<h2>Choose Your Habit</h2>
+						<div class="options">
+							<p><label><input name="habit" type="radio" value="0" onclick="toggleButton()" /><span>Drink More Water</span></label></p>
+							<p><label><input name="habit" type="radio" value="1" onclick="toggleButton()" disabled /><span>Meditate</span></label></p>
+							<p><label><input name="habit" type="radio" value="2" onclick="toggleButton()" disabled /><span>Get Fit</span></label></p>
+							<p><label><input name="habit" type="radio" value="3" onclick="toggleButton()" disabled/><span>Eat Healthier</span></label></p>
+						</div>
+						<div class="">
+							<a id="selectHabit" class="btn waves-effect cyan white-text darken-2 disabled" onclick="M.Carousel.getInstance(document.querySelector('.carousel')).next();">Select</a>
+						</div>
+					</div>
+				</div>
+				<div class="carousel-item" href="#three!">
+					<div class="onboarding">
+						<h2>Define Your Goal</h2>
+						<div class="options">Drink 
+							<div class="input-field inline">
+								<input id="goal" type="number" class="validate" value="64" style="width: 3em;">
+							</div>
+							fluid ounces of water per day.
+						</div>
+						<div class="">
+							<a class="btn waves-effect cyan white-text darken-2" onclick="javascript:startHabit();">Select</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+	</main>
+	
+	<!-- Manage Habits modal -->
+	<div id="manage-habits" class="modal">
+		<div class="modal-content">
+			<h4>Manage Habits</h4>
+			Developer Tool:  Use this to clear your Local Storage as needed for development.  Will be made more user-friendly in the next iteration.
+		</div>
+		<div class="modal-footer">
+			<a href="#!" class="modal-action modal-close waves-effect waves-red red btn-flat" onclick="localStorage.removeItem('habits');">Delete All Habits</a>
+			<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Cancel</a>
+		</div>
+	</div>
+
+	<footer class="page-footer blue-grey darken-2">
+		<div class="container">
+			<div class="row">
+				<div class="col l6 s12">
+					<a href="#!" class="white-text">Habitat</a>
+					<p class="grey-text text-lighten-4"></p>
+				</div>
+				<div class="col l3 s12">
+					<a href="#!" class="white-text">Settings</a>
+				</div>
+				<div class="col l3 s12">
+					<a href="#!" class="white-text">Contact</a>
+				</div>
+			</div>
+		</div>
+		<div class="footer-copyright">
+			<div class="container">
+			Made with <a class="cyan-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+			</div>
+		</div>
+	</footer>
+
+
+	<!--	Scripts-->
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/materialize.js"></script>
+	<script src="js/init.js"></script>
+	<script src="js/onboarding.js"></script>
+
+	</body>
+</html>

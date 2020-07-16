@@ -1,0 +1,6 @@
+- add a daily goal to to-do list
+- display the daily goal in the tracker, achieved or not
+
+- add info button to to-do list
+- add prompts to community page
+- add way for user to put in quantities for goals. Link this to the graph

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	</head>
+	<body>
+		<script>
+			if (!localStorage.getItem("habit"))
+				window.location.replace("onboarding.html");
+			else
+				window.location.replace("todo.html");
+		</script>
+	</body>
+</html>

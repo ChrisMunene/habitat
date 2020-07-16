@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<title>Habitat: To Do</title>
+
+	<!-- CSS	-->
+	<link rel="manifest" href="manifest.json">
+	<link href="fonts/material-icons.css" type="text/css" rel="stylesheet" media="screen,project"/>
+	<link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+	<link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body class="blue-grey lighten-5">
+	<!-- Nav Dropdown -->
+	<ul id="nav-dropdown" class="dropdown-content">			
+		<li><a href="#" onclick="startHabit();">Reading</a></li>
+		<li><a href="#" onclick="startHabit();">Drink More Water</a></li>
+		<li class="divider"></li>
+		<li><a href="#manage-habits" class="modal-trigger">Manage Habits</a></li>
+	</ul>
+	
+	
+	<nav class="nav-extended blue-grey darken-3 progress" role="navigation">
+		<!-- Navigation-embedded progress bar -->
+		<div id="progress-bar" class="determinate cyan darken-3"></div>
+		
+		<!-- Top Navigation -->
+		<div class="nav-wrapper container">
+			<a id="logo-container" href="index.html" class="brand-logo cyan-text text-accent-3"><img src="assets/logo.png" style="height: 56px;"></a>
+			<a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+			<ul class="right hide-on-med-and-down">
+				<li><a class="teal-text text-lighten-4 dropdown-trigger" href="#!" data-target="nav-dropdown">Drink More Water<i class="material-icons right">arrow_drop_down</i></a></li>
+			</ul>
+		</div>
+		
+		<!-- Bottom Navigation Tabs (Desktop Only) -->
+		<div class="nav-content hide-on-med-and-down container">
+			<ul class="tabs tabs-transparent">
+				<li class="tab"><a class="active" href="todo.html" target="_self"><i class="material-icons left">playlist_add_check</i>To Do</a></li>
+				<li class="tab"><a href="community.html" target="_self"><i class="material-icons left">group</i>Community</a></li>
+				<li class="tab"><a href="progress.html" target="_self"><i class="material-icons left">insert_chart</i>Progress</a></li>
+			</ul>
+		</div>
+
+		<!-- Mobile Slide-In Navigation -->
+		<ul id="nav-mobile" class="sidenav blue-grey darken-4">
+			<li class="sidenav-header">Habits</h></li>
+			<li class="active"><a href="#" class="teal-text text-lighten-4">Drink More Water</a></li>
+			<li><a href="#" class="teal-text text-lighten-4">Meditation</a></li>
+			<li class="divider"></li>
+			<li><a class="teal-text text-lighten-4 modal-trigger" href="#manage-habits">Manage Habits</a></li>
+		</ul>
+	</nav>
+	
+	<!-- Checklist -->
+	<main class="container">
+		<div class="row">
+			<div class="col s12 m10 offset-m1">
+				<div class="card">
+					<div class="card-content">
+						<span class="teal-text text-darken-2" style="float: left;"><i class="material-icons medium">local_drink</i></span>
+						<h5 id="logged" class="header center"></h5>
+					</div>
+					<div class="card-action center tracker">
+						<a href="#!" onclick="adjustQuantity(16)" class="btn-flat waves-effect waves-teal teal-text"><i class="material-icons">add_circle</i> Add a Bottle</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="row">
+			<h5 class="header teal-text text-darken-2">Today's Action Items</h5>
+			<form action="#!">
+				<ul class="collapsible popout" id="checklist">
+				</ul>
+			</form>
+		</div>
+	</main>
+
+	<!-- input habit modal -->
+	<div id="input-habit" class="modal">
+		<div class="modal-content">
+			<h4>How much water have you had to drink today?</h4>
+			<div class="input-field inline">
+				<input id="quantity" type="number" class="validate" pattern="\d*">
+			</div> <label for="quantity">fl oz</label>
+		</div>
+		<div class="modal-footer">
+			<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Cancel</a>
+			<a href="#!" onclick="adjustQuantity(parseInt($('#quantity').val()), false);" id="input-habit" class="modal-action modal-close waves-effect waves-teal btn teal">Adjust Quantity</a>
+		</div>
+	</div>
+	
+	
+	
+	<!-- Manage Habits modal -->
+	<div id="manage-habits" class="modal">
+		<div class="modal-content">
+			<h4>Manage Habits</h4>
+			Developer Tool:  Use this to clear your Local Storage as needed for development.  Will be made more user-friendly in the next iteration.
+		</div>
+		<div class="modal-footer">
+			<a href="#!" class="modal-action modal-close waves-effect waves-red red btn-flat" onclick="deleteHabits();">Delete All Habits</a>
+			<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Cancel</a>
+		</div>
+	</div>
+
+	<!-- Mobile Toolbar Navigation -->
+	<div class="toolbar-fixed grey darken-4 hide-on-large-only">
+		<ul>
+			<li><a class="blue-grey darken-3" href="todo.html"><i class="material-icons">playlist_add_check</i></a></li>
+			<li><a href="community.html"><i class="material-icons">group</i></a></li>
+			<li><a href="progress.html"><i class="material-icons">insert_chart</i></a></li>
+		</ul>
+	</div>
+
+	<footer class="page-footer blue-grey darken-2">
+		<div class="container">
+			<div class="row">
+				<div class="col l6 s12">
+					<a href="#!" class="white-text">Habitat</a>
+					<p class="grey-text text-lighten-4"></p>
+				</div>
+				<div class="col l3 s12">
+					<a href="#!" class="white-text">Settings</a>
+				</div>
+				<div class="col l3 s12">
+					<a href="#!" class="white-text">Contact</a>
+				</div>
+			</div>
+		</div>
+		<div class="footer-copyright">
+			<div class="container">
+			Made with <a class="cyan-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+			</div>
+		</div>
+	</footer>
+
+
+	<!--	Scripts-->
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/materialize.js"></script>
+	<script src="js/init.js"></script>
+	<script src="js/onboarding.js"></script>
+	<script src="js/todo.js"></script>
+
+	</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+	<title>Habitat: Progress</title>
+
+	<!-- CSS	-->
+	<link href="fonts/material-icons.css" type="text/css" rel="stylesheet" media="screen,project"/>
+	<link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+	<link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body class="blue-grey lighten-5">
+	<!-- Nav Dropdown -->
+	<ul id="nav-dropdown" class="dropdown-content">
+		<li><a href="#!">Drink More Water</a></li>
+		<li><a href="#!">Meditate</a></li>
+		<li class="divider"></li>
+		<li><a href="#manage-habits" class="modal-trigger">Manage Habits</a></li>
+	</ul>
+	
+	<nav class="nav-extended blue-grey darken-3 progress" role="navigation">
+		<!-- Navigation-embedded progress bar -->
+		<div class="determinate cyan darken-3" style="width: 70%"></div>
+		
+		<!-- Top Navigation -->
+		<div class="nav-wrapper container">
+			<a id="logo-container" href="index.html" class="brand-logo cyan-text text-accent-3"><img src="assets/logo.png" style="height: 56px;"></a>
+			<a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+			<ul class="right hide-on-med-and-down">
+				<li><a class="teal-text text-lighten-4 dropdown-trigger" href="#!" data-target="nav-dropdown">Drink More Water<i class="material-icons right">arrow_drop_down</i></a></li>
+			</ul>
+		</div>
+		
+		<!-- Bottom Navigation Tabs (Desktop Only) -->
+		<div class="nav-content hide-on-med-and-down container">
+			<ul class="tabs tabs-transparent">
+				<li class="tab"><a href="todo.html" target="_self"><i class="material-icons left">playlist_add_check</i>To Do</a></li>
+				<li class="tab"><a href="community.html" target="_self"><i class="material-icons left">group</i>Community</a></li>
+				<li class="tab"><a class="active" href="progress.html" target="_self"><i class="material-icons left">insert_chart</i>Progress</a></li>
+			</ul>
+		</div>
+
+		<!-- Mobile Slide-In Navigation -->
+		<ul id="nav-mobile" class="sidenav blue-grey darken-4">
+			<li class="sidenav-header">Habits</h></li>
+			<li class="active"><a href="#" class="teal-text text-lighten-4">Drink More Water</a></li>
+			<li><a href="#" class="teal-text text-lighten-4">Meditation</a></li>
+			<li class="divider"></li>
+			<li><a class="teal-text text-lighten-4 modal-trigger" href="#manage-habits">Manage Habits</a></li>
+		</ul>
+	</nav>
+
+
+	<div class="container">
+		<div class="row">
+			<div class="col s12 m6">
+				<div class="card">
+					<div class="card-content">
+						<span class="card-title">Tracker</span>
+					</div>
+					<div class="card-tabs">
+						<ul class="tabs tabs-fixed-width">
+							<li class="tab"><a href="#1d">1d</a></li>
+							<li class="tab"><a class="active" href="#7d">7d</a></li>
+							<li class="tab"><a href="#30d">30d</a></li>
+						</ul>
+					</div>
+					<div class="card-content grey lighten-4">
+						<div id="1d"><img src="assets/daily.png" style="width: 100%;"></div>
+						<div id="7d"><img src="assets/chart.png" style="width: 100%;"></div>
+						<div id="30d"><img src="assets/weeks.png"></div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col s12 m6">
+				<div class="card">
+					<div class="card-content">
+						<span class="card-title">Records</span>
+						<ul>
+							<li>Longest streak: 15 days</li>
+							<li>Most water in one day: 120 oz</li>
+							<li>Total days logged: 94 days</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="col s12 m6">
+				<div class="card">
+					<div class="card-content">
+						<span class="card-title">History</span>
+						<ul  class="collapsible popout" id = "history">
+							
+
+							
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+
+	<div class="toolbar-fixed grey darken-4 hide-on-large-only">
+		<ul>
+			<li><a href="todo.html"><i class="material-icons">playlist_add_check</i></a></li>
+			<li><a class="" href="community.html"><i class="material-icons">group</i></a></li>
+			<li><a class="blue-grey darken-3" class="" href="progress.html"><i class="material-icons">insert_chart</i></a></li>
+		</ul>
+	</div>
+
+	<!-- Manage Habits modal -->
+	<div id="manage-habits" class="modal">
+		<div class="modal-content">
+			<h4>Manage Habits</h4>
+			Developer Tool:  Use this to clear your Local Storage as needed for development.  Will be made more user-friendly in the next iteration.
+		</div>
+		<div class="modal-footer">
+			<a href="#!" class="modal-action modal-close waves-effect waves-red red btn-flat" onclick="deleteHabits();">Delete All Habits</a>
+			<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Cancel</a>
+		</div>
+	</div>
+
+	<!-- Mobile Toolbar Navigation -->
+	<div class="toolbar-fixed grey darken-4 hide-on-large-only">
+		<ul>
+			<li><a class="blue-grey darken-3" href="todo.html"><i class="material-icons">playlist_add_check</i></a></li>
+			<li><a class="" href="community.html"><i class="material-icons">group</i></a></li>
+			<li><a class="" href="progress.html"><i class="material-icons">insert_chart</i></a></li>
+		</ul>
+	</div>
+
+	<footer class="page-footer blue-grey darken-2">
+		<div class="container">
+			<div class="row">
+				<div class="col l6 s12">
+					<a href="#!" class="white-text">Habitat</a>
+					<p class="grey-text text-lighten-4"></p>
+				</div>
+				<div class="col l3 s12">
+					<a href="#!" class="white-text">Settings</a>
+				</div>
+				<div class="col l3 s12">
+					<a href="#!" class="white-text">Contact</a>
+				</div>
+			</div>
+		</div>
+		<div class="footer-copyright">
+			<div class="container">
+			Made with <a class="cyan-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+			</div>
+		</div>
+	</footer>
+
+
+	<!--	Scripts-->
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/materialize.js"></script>
+	<script src="js/init.js"></script>
+	<script src="js/progress.js"></script>
+
+	</body>
+</html>
+

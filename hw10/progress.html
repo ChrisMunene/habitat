@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+	<title>Starter Template - Materialize</title>
+
+	<!-- CSS	-->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+	<link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body class="blue-grey lighten-5">
+	<nav class="nav-extended blue-grey darken-3 progress" style="margin-top: 0;" role="navigation">
+		<div class="determinate cyan darken-3" style="width: 70%"></div>
+		<div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo cyan-text text-accent-3"><img src="assets/logo.png" style="height: 56px;"></a>
+			<ul class="right hide-on-med-and-down">
+				<li><a href="#" class="teal-text text-lighten-4">Habit 1</a></li>
+				<li><a href="#" class="teal-text text-lighten-4">Habit 2</a></li>
+				<li><a href="#" class="teal-text text-lighten-4">Manage Habits</a></li>
+			</ul>
+
+			<div class="nav-content hide-on-med-and-down">
+				<ul class="tabs tabs-transparent">
+					<li class="tab"><a href="todo.html"><i class="material-icons left">playlist_add_check</i> To Do</a></li>
+					<li class="tab"><a href="community.html"><i class="material-icons left">group</i> Community</a></li>
+					<li class="tab"><a class="active" href="progress.html"><i class="material-icons left">insert_chart</i> Progress</a></li>
+				</ul>
+			</div>
+
+			<ul id="nav-mobile" class="sidenav cyan darken-3">
+				<li><a href="#" class="teal-text text-lighten-4">Habit 1</a></li>
+				<li><a href="#" class="teal-text text-lighten-4">Habit 2</a></li>
+				<li><a href="#" class="teal-text text-lighten-4">Manage Habits</a></li>
+			</ul>
+			<a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+		</div>
+	</nav>
+
+	<div class="container">
+		<div class="row">
+			<div class="col s12 m6">
+				<div class="card">
+					<div class="card-content">
+						<span class="card-title">Tracker</span>
+					</div>
+					<div class="card-tabs">
+						<ul class="tabs tabs-fixed-width">
+							<li class="tab"><a href="#1d">1d</a></li>
+							<li class="tab"><a class="active" href="#7d">7d</a></li>
+							<li class="tab"><a href="#30d">30d</a></li>
+						</ul>
+					</div>
+					<div class="card-content grey lighten-4">
+						<div id="1d"></div>
+						<div id="7d"><img src="assets/chart.png" style="width: 100%;"></div>
+						<div id="30d"></div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col s12 m6">
+				<div class="card">
+					<div class="card-content">
+						<span class="card-title">Records</span>
+						<ul>
+							<li>Longest streak: 15 days</li>
+							<li>Most water in one day: 120 oz</li>
+							<li>Total days logged: 94 days</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+
+	<div class="toolbar-fixed grey darken-4 hide-on-large-only">
+		<ul>
+			<li><a href="todo.html"><i class="material-icons">playlist_add_check</i></a></li>
+			<li><a class="" href="community.html"><i class="material-icons">group</i></a></li>
+			<li><a class="blue-grey darken-3" class="" href="progress.html"><i class="material-icons">insert_chart</i></a></li>
+		</ul>
+	</div>
+
+	<footer class="page-footer blue-grey darken-2">
+		<div class="container">
+			<div class="row">
+				<div class="col l6 s12">
+					<h5 class="white-text">Habitat</h5>
+					<p class="grey-text text-lighten-4"></p>
+
+
+				</div>
+				<div class="col l3 s12">
+					<h5 class="white-text">Settings</h5>
+				</div>
+				<div class="col l3 s12">
+					<h5 class="white-text">Contact</h5>
+				</div>
+			</div>
+		</div>
+		<div class="footer-copyright">
+			<div class="container">
+			Made with <a class="cyan-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+			</div>
+		</div>
+	</footer>
+
+
+	<!--	Scripts-->
+	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script src="js/materialize.js"></script>
+	<script src="js/init.js"></script>
+
+	</body>
+</html>
